@@ -1,0 +1,23 @@
+mysql:
+  host: "11.0.1.70"
+  user: "root"
+  password: "123456"
+  port: 3306
+  dbname: "minzu"
+  charset: "utf8mb4"
+  parseTime: True
+  loc: "Local"
+  slowSql: 50ms # 慢sql时间。单位毫秒
+  logLevel: info # error、info、warn
+  ignoreRecordNotFoundError: true # 是否忽略ErrRecordNotFound(未查到记录错误)
+  gorm:
+    skipDefaultTx: true # 是否跳过默认事务
+    tablePrefix: "book_" #表前缀
+    singularTable: true # 是否使用单数表名(默认复数)，启用后，User结构体表将是user
+    coverLogger: true # 是否覆盖默认logger
+    prepareStmt: false # 执行任何SQL时都会创建一个prepared statement并将其缓存，以提高后续的效率
+system:
+  host: ""
+  port: "8080"
+  env: "debug"
+
